@@ -7,5 +7,5 @@ void setup() {
 }
 
 void loop() {
-    motor.Move(100, 100);//56 mais rapido 
+    
 }
