@@ -1,3 +1,4 @@
-class Nav{
-    
+class Naveg{
+
+
 };
