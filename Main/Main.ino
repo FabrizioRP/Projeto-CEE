@@ -1,4 +1,3 @@
-#include<Ultrasonic.h>
 #include "Motor.h"
 #include "Sensor.h"
 #include "Naveg.h"
@@ -29,5 +28,7 @@ void Sweep(){
 
     sensor.Servo(deg);
 
-    delay(110);
+    Serial.println(deg);
+
+    delay(50);
 }

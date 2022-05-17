@@ -20,7 +20,7 @@ class Sensor{
         }
 
         void Servo(int deg = 70){//70 eh mais ou menos meio
-            int ang = map(deg, 0, 180, 600, 2400);
+            int ang = map(deg, 0, 180, 300, 2400);
 
             digitalWrite(servo, HIGH);
             delayMicroseconds(ang);
@@ -37,7 +37,7 @@ class Sensor{
             if (num == 1) echo = e1;
             else echo = e2;
 
-            int duration = 0;
+            unsigned long duration = 0;
 
             float dist = 0;
 
@@ -47,7 +47,7 @@ class Sensor{
             delayMicroseconds(10);
             digitalWrite(trig, LOW);
 
-            duration = pulseIn(echo, HIGH);
+            duration = pulseIn(echo, HIGH, 30000);
             dist = (duration/2) / 29.1;
             
             return dist;
