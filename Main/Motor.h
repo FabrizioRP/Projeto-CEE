@@ -16,7 +16,7 @@ class Motor {
             pinMode(porta22, OUTPUT);
         }
 
-        void Move(int spd1, int spd2){//funcao q move os motores uma certa velocidade; velocidades entre -100-100
+        void Move(float spd1, float spd2){//funcao q move os motores uma certa velocidade; velocidades entre -100-100
             if (spd1 < 0){
                 analogWrite(porta11, round(255*(abs(spd1)/100.0)));
                 analogWrite(porta21, 0);
