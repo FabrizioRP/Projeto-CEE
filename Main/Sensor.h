@@ -20,7 +20,7 @@ class Sensor{
         }
 
         void Servo(int deg = 70){//70 eh mais ou menos meio
-            int ang = map(deg, 0, 180, 200, 2900);
+            int ang = map(deg, 0, 180, 50, 2700);
 
             digitalWrite(servo, HIGH);
             delayMicroseconds(ang);
